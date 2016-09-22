@@ -22,6 +22,8 @@ if s:extraConceal
   syntax keyword cppNiceKeyword for conceal cchar=∀
   syntax keyword cppNiceKeyword continue conceal cchar=↟
   syntax keyword cppNiceKeyword break conceal cchar=↯
+  syntax keyword cppNiceKeyword if conceal cchar=⁇
+  syntax keyword cppNiceKeyword else conceal cchar=‼
   syntax keyword cppNiceType void conceal cchar=∅
 
   syntax match cppHiddenOperator /^\s*}$/ conceal
