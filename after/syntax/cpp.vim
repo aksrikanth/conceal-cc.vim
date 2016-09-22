@@ -14,6 +14,7 @@ syntax match cppNiceOperator "<<" conceal cchar=≪
 syntax match cppNiceOperator ">>" conceal cchar=≫
 syntax match cppNiceOperator "\:\:" conceal cchar=∷
 syntax match cppNiceOperator "->" conceal cchar=→
+syntax match cppNiceOperator "&" conceal cchar=§
 
 let s:extraConceal = 1
 if s:extraConceal
