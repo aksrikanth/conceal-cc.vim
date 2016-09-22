@@ -20,6 +20,8 @@ if s:extraConceal
   syntax keyword cppNiceKeyword const conceal cchar=ℂ
   syntax keyword cppNiceKeyword auto conceal cchar=⍺
   syntax keyword cppNiceKeyword for conceal cchar=∀
+  syntax keyword cppNiceKeyword continue conceal cchar=↟
+  syntax keyword cppNiceKeyword break conceal cchar=↯
   syntax keyword cppNiceType void conceal cchar=∅
 
   syntax match cppHiddenOperator /^\s*}$/ conceal
