@@ -3,18 +3,22 @@ if exists('g:no_cpp_conceal') || !has('conceal') || &enc != 'utf-8'
 endif
 
 syntax match cppNiceOperator "*" conceal cchar=∗
-syntax match cppNiceOperator "&" conceal cchar=§
+syntax match cppNiceOperator "&" conceal cchar=ℰ
 syntax match cppNiceOperator "==" conceal cchar=≟
 syntax match cppNiceOperator "!=" conceal cchar=≠
 syntax match cppNiceOperator "<=" conceal cchar=≤
 syntax match cppNiceOperator ">=" conceal cchar=≥
 syntax match cppNiceOperator "++" conceal cchar=⧺
+syntax match cppNiceOperator "--" conceal cchar=╌
 syntax match cppNiceOperator "||" conceal cchar=⋁
 syntax match cppNiceOperator "&&" conceal cchar=⋀
 syntax match cppNiceOperator "<<" conceal cchar=≪
 syntax match cppNiceOperator ">>" conceal cchar=≫
 syntax match cppNiceOperator "\:\:" conceal cchar=∷
-syntax match cppNiceOperator "->" conceal cchar=→
+syntax match cppNiceOperator "->" conceal cchar=⇾
+
+syntax match cppNiceFunction "EXPECT_EQ" conceal cchar=≟
+syntax match cppNiceFunction "ASSERT_EQ" conceal cchar=≡
 
 let s:extraConceal = 1
 if s:extraConceal
@@ -24,10 +28,12 @@ if s:extraConceal
   syntax keyword cppNiceKeyword break conceal cchar=↯
   syntax keyword cppNiceKeyword const conceal cchar=ℂ
   syntax keyword cppNiceKeyword continue conceal cchar=↟
-  syntax keyword cppNiceKeyword else conceal cchar=‼
+  syntax keyword cppNiceKeyword else conceal cchar=⁑
   syntax keyword cppNiceKeyword for conceal cchar=∀
   syntax keyword cppNiceKeyword if conceal cchar=⁇
+  syntax keyword cppNiceKeyword override conceal cchar=↠
   syntax keyword cppNiceKeyword return conceal cchar=⇦
+  syntax keyword cppNiceKeyword static conceal cchar=∬
 
   syntax keyword cppNiceType void conceal cchar=∅
 
