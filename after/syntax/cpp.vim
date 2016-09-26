@@ -2,7 +2,7 @@ if exists('g:no_cpp_conceal') || !has('conceal') || &enc != 'utf-8'
   finish
 endif
 
-syntax match cppNiceOperator "*" conceal cchar=∗
+syntax match cppNiceOperator "*" conceal cchar=⁕
 syntax match cppNiceOperator "&" conceal cchar=ℰ
 syntax match cppNiceOperator "==" conceal cchar=≟
 syntax match cppNiceOperator "!=" conceal cchar=≠
@@ -16,6 +16,7 @@ syntax match cppNiceOperator "<<" conceal cchar=≪
 syntax match cppNiceOperator ">>" conceal cchar=≫
 syntax match cppNiceOperator "\:\:" conceal cchar=∷
 syntax match cppNiceOperator "->" conceal cchar=⇾
+syntax match cppNiceOperator " \zs\*\ze " conceal cchar=⨉
 
 syntax match cppNiceFunction "EXPECT_EQ" conceal cchar=≟
 syntax match cppNiceFunction "ASSERT_EQ" conceal cchar=≡
@@ -29,11 +30,13 @@ if s:extraConceal
   syntax keyword cppNiceKeyword const conceal cchar=ℂ
   syntax keyword cppNiceKeyword continue conceal cchar=↟
   syntax keyword cppNiceKeyword else conceal cchar=⁑
+  syntax keyword cppNiceKeyword explicit conceal cchar=⍷
   syntax keyword cppNiceKeyword for conceal cchar=∀
   syntax keyword cppNiceKeyword if conceal cchar=⁇
   syntax keyword cppNiceKeyword override conceal cchar=↠
   syntax keyword cppNiceKeyword return conceal cchar=⇦
   syntax keyword cppNiceKeyword static conceal cchar=∬
+  syntax keyword cppNiceKeyword virtual conceal cchar=ⅵ
 
   syntax keyword cppNiceType void conceal cchar=∅
 
