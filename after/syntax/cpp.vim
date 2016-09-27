@@ -2,6 +2,8 @@ if exists('g:no_cpp_conceal') || !has('conceal') || &enc != 'utf-8'
   finish
 endif
 
+syntax keyword cppType int32 uint32 int64 uint64
+
 syntax match cppNiceOperator "*" conceal cchar=⁕
 syntax match cppNiceOperator "&" conceal cchar=&
 syntax match cppNiceOperator "==" conceal cchar=≟
