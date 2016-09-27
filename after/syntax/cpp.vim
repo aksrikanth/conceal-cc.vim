@@ -44,6 +44,7 @@ if s:extraConceal
 
   syntax keyword cppNiceType void conceal cchar=∅
 
+  syntax match cppHiddenOperator /\S\zs()\ze\S/ conceal
   syntax match cppHiddenOperator /^\s*}$/ conceal
   syntax match cppHiddenOperator /\(^\s*\)\@<=}\s*/ conceal
   syntax match cppHiddenOperator /\ *{$/ conceal
