@@ -27,6 +27,7 @@ if s:extraConceal
 
   syntax keyword cppNiceKeyword auto conceal cchar=⍺
   syntax keyword cppNiceKeyword break conceal cchar=↯
+  syntax keyword cppNiceKeyword case conceal cchar=↳
   syntax keyword cppNiceKeyword const conceal cchar=ℂ
   syntax keyword cppNiceKeyword continue conceal cchar=↟
   syntax keyword cppNiceKeyword else conceal cchar=⁑
@@ -36,6 +37,7 @@ if s:extraConceal
   syntax keyword cppNiceKeyword override conceal cchar=↠
   syntax keyword cppNiceKeyword return conceal cchar=⇦
   syntax keyword cppNiceKeyword static conceal cchar=∬
+  syntax keyword cppNiceKeyword switch conceal cchar=⇶
   syntax keyword cppNiceKeyword virtual conceal cchar=ⅵ
 
   syntax keyword cppNiceType void conceal cchar=∅
