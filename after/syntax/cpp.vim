@@ -3,7 +3,7 @@ if exists('g:no_cpp_conceal') || !has('conceal') || &enc != 'utf-8'
 endif
 
 syntax match cppNiceOperator "*" conceal cchar=⁕
-syntax match cppNiceOperator "&" conceal cchar=ℰ
+syntax match cppNiceOperator "&" conceal cchar=&
 syntax match cppNiceOperator "==" conceal cchar=≟
 syntax match cppNiceOperator "!=" conceal cchar=≠
 syntax match cppNiceOperator "<=" conceal cchar=≤
