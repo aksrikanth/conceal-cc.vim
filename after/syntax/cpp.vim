@@ -26,6 +26,7 @@ syntax match cppNiceFunction "ASSERT_EQ" conceal cchar=≡
 let s:extraConceal = 1
 if s:extraConceal
   syntax keyword cppNiceConstant nullptr conceal cchar=⦳
+  syntax keyword cppNiceConstant NULL conceal cchar=⍉
 
   syntax keyword cppNiceKeyword auto conceal cchar=⍺
   syntax keyword cppNiceKeyword break conceal cchar=↯
@@ -38,13 +39,14 @@ if s:extraConceal
   syntax keyword cppNiceKeyword if conceal cchar=⁇
   syntax keyword cppNiceKeyword override conceal cchar=⎆
   syntax keyword cppNiceKeyword return conceal cchar=⇦
+  syntax keyword cppNiceKeyword sizeof conceal cchar=⊞
   syntax keyword cppNiceKeyword static conceal cchar=∬
   syntax keyword cppNiceKeyword switch conceal cchar=⋔
   syntax keyword cppNiceKeyword virtual conceal cchar=ⅵ
 
   syntax keyword cppNiceType void conceal cchar=∅
 
-  syntax match cppHiddenOperator /\S\zs()\ze\S/ conceal
+  syntax match cppHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
   syntax match cppHiddenOperator /^\s*}$/ conceal
   syntax match cppHiddenOperator /\(^\s*\)\@<=}\s*/ conceal
   syntax match cppHiddenOperator /\ *{$/ conceal
