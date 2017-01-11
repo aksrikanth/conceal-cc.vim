@@ -44,6 +44,9 @@ if s:extraConceal
   syntax keyword cppNiceKeyword switch conceal cchar=⋔
   syntax keyword cppNiceKeyword virtual conceal cchar=ⅵ
 
+  syntax keyword cppNiceBoolean true conceal cchar=Ƭ
+  syntax keyword cppNiceBoolean false conceal cchar=ƒ
+
   syntax keyword cppNiceType void conceal cchar=∅
 
   syntax match cppHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
@@ -56,6 +59,7 @@ endif
 hi link cppNiceConstant Constant
 hi link cppNiceKeyword Keyword
 hi link cppNiceOperator Operator
+hi link cppNiceBoolean Boolean
 hi link cppNiceType Type
 
 hi! link Conceal Operator
