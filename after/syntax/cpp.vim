@@ -48,6 +48,13 @@ if s:extraConceal
   syntax keyword cppNiceBoolean false conceal cchar=ƒ
 
   syntax keyword cppNiceType void conceal cchar=∅
+  syntax keyword cppNiceType char conceal cchar=ⅽ
+  syntax keyword cppNiceType string conceal cchar=⟆
+  syntax keyword cppNiceType int conceal cchar=ⅰ
+  syntax keyword cppNiceType int32 conceal cchar=ⅰ
+  syntax keyword cppNiceType int64 conceal cchar=ⅱ
+  syntax keyword cppNiceType uint32 conceal cchar=Ⅰ
+  syntax keyword cppNiceType uint64 conceal cchar=Ⅱ
 
   syntax match cppHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
   syntax match cppHiddenOperator /^\s*}$/ conceal
