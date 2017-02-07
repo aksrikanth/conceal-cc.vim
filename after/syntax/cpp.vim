@@ -20,6 +20,8 @@ syntax match cppNiceOperator "\:\:" conceal cchar=∷
 syntax match cppNiceOperator "->" conceal cchar=⇾
 syntax match cppNiceOperator " \zs\*\ze " conceal cchar=⨉
 
+syntax match cppNiceFunction "EXPECT_TRUE" conceal cchar=Ƭ
+syntax match cppNiceFunction "EXPECT_FALSE" conceal cchar=ƒ
 syntax match cppNiceFunction "EXPECT_EQ" conceal cchar=≟
 syntax match cppNiceFunction "ASSERT_EQ" conceal cchar=≡
 
@@ -68,10 +70,11 @@ if s:extraConceal
   syntax match cppHiddenOperator /;$/ conceal
 endif
 
+hi link cppNiceBoolean Boolean
 hi link cppNiceConstant Constant
+hi link cppNiceFunction Function
 hi link cppNiceKeyword Keyword
 hi link cppNiceOperator Operator
-hi link cppNiceBoolean Boolean
 hi link cppNiceType Type
 
 hi! link Conceal Operator
